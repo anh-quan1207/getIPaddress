@@ -33,6 +33,7 @@ app.get('/track', async (req, res) => {
   }
 });
 
-app.listen(2000, () => {
-  console.log('Server đang chạy tại http://localhost:2000/track');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server đang chạy tại http://localhost:${PORT}/track`);
 });
